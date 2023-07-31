@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Priority Pro</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="signUpRegFormContainer">
+    <form method="post" id="signUpRegFormContainer" enctype="multipart/form-data">
+    <a class="backContainer" href="index.html">
+      <div id="back"class="back">
+        <div class="circle"><svg xmlns="http://www.w3.org/2000/svg" class="bi bi-arrow-90deg-left" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M1.146 4.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H12.5A2.5 2.5 0 0 1 15 6.5v8a.5.5 0 0 1-1 0v-8A1.5 1.5 0 0 0 12.5 5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4z"/>
+        </svg></div>
+      </div></a>
+    <h1>SIGN UP</h1>
+    <p>Please fill in this form to create an account.</p>
+    <div class="signFormGroup">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <span class="errorMessage" id="emailError"></span>
+      </div>
+      <div class="signFormGroup">
+        <label for="username">Contact Number</label>
+        <input type="text" id="username" name="username" placeholder="Enter your contact number" required>
+        <span class="errorMessage" id="usernameError"></span>
+      </div>
+      <div class="signFormGroup">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        <span class="errorMessage" id="passwordError"></span>
+      </div>
+      <div class="signFormGroup">
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+        <span class="errorMessage" id="confirmPasswordError"></span>
+      </div>   
+      <div id="btn4Container"><button class="button4" type="button" name="register" id="register">Register</button></div>
+    </form>
+    </div>
+    
+    <script>
+      // Function to set the orientation to portrait mode
+      function lockPortraitOrientation() {
+        if (screen.orientation && screen.orientation.lock) {
+          screen.orientation.lock("portrait")
+            .then(() => {
+              console.log("Orientation locked to portrait mode");
+            })
+            .catch((error) => {
+              console.error("Failed to lock orientation:", error);
+            });
+        }
+      }
+  
+      // Lock the orientation when the document is ready
+      document.addEventListener("DOMContentLoaded", lockPortraitOrientation);
+    </script>
+</body>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js";
+  import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js"
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyAJAn0TGpkflbSWk2aLyBNAcGHEt3n6Cks",
+    authDomain: "prioritypro-a7958.firebaseapp.com",
+    databaseURL: "https://prioritypro-a7958-default-rtdb.asia-southeast1.firebasedatabase.app/",
+    projectId: "prioritypro-a7958",
+    storageBucket: "prioritypro-a7958.appspot.com",
+    messagingSenderId: "760361525285",
+    appId: "1:760361525285:web:f6506944fdcfcfc106dfcc",
+    measurementId: "G-FMPWRK09PH"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const auth = getAuth();
+
+  console.log(app);
+  //----- New Registration code start	  
+  document.getElementById("register").addEventListener("click", function() {
+		  var email =  document.getElementById("email").value;
+		  var password = document.getElementById("password").value;
+		  //For new registration
+		  createUserWithEmailAndPassword(auth, email, password)
+		  .then((userCredential) => {
+		    // Signed in 
+		    const user = userCredential.user;
+		    console.log(user);
+		    alert("Registration successfully!!");
+        window.location.href = 'index.html';
+		    // ...
+		  })
+		  .catch((error) => {
+		    const errorCode = error.code;
+		    const errorMessage = error.message;
+		    // ..
+		    console.log(errorMessage);
+		    alert(error);
+		  });		  		  
+	  });
+	  //----- End
+</script>
+</html>

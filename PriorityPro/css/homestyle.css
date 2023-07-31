@@ -1,0 +1,542 @@
+body {
+    background-color: #E8DEDE;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+  }
+
+/*Hides section*/
+#Task{
+  display: none;
+}
+#Expense{
+  display: none;
+}
+#History{
+  display: none;
+}
+
+/*Home css*/
+.home{
+  background-color: #467490;
+  padding: 10px;
+  width: auto;
+  height: 400px;
+  position: relative;
+
+}
+
+.circle1{
+  width: 110px;
+  height: 110px;
+  width: 140px;
+  height: 140px;
+  background-color:#CE8850;
+  border-radius: 50%;
+  position:relative;
+  margin: auto;
+  right: 20px;
+  align-items: center;
+  
+}
+
+.circle1 p{
+  padding: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: #E8DEDE;
+  font-size: 15px;
+}
+
+.circle1 p span{
+  font-size: 60px;
+  color: #467490;
+}
+
+.circle2{
+  width: 110px;
+  height: 110px;
+  background-color:#CE8850;
+  border-radius: 50%;
+  position: relative;
+  margin: auto;
+  bottom: 20px;
+  right: 110px;
+
+}
+.circle2 p{
+  padding: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: #E8DEDE;
+  font-size: 13px;
+}
+
+.circle2 p span{
+  font-size: 50px;
+  color: #467490;
+}
+
+.circle3 svg{
+  width: 35px;
+  height: 35px;
+  fill:  #467490;
+  margin-top: 24px;
+}
+
+.circle3{
+  width: 100px;
+  height: 100px;
+  background-color:#CE8850;
+  border-radius: 50%;
+  position: relative;
+  margin: auto;
+  bottom: 160px;
+  right: 40px;
+}
+
+.circle3 p{
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: #E8DEDE;
+  font-size: 13px;
+}
+
+
+
+
+
+
+
+
+.logo{
+  background-color: #ffffff00;
+}
+
+.navbar{
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #467490;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+
+}
+.navbar a {
+    padding: 15px 0;
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+  }  
+  .navbar a.active {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+  }
+  .navbar a.taskText{
+    margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+  }
+  .navbar svg{
+    margin: 10px;
+    display: block;
+    width: 30px; 
+    height: 30px; 
+    fill: #E8DEDE;
+  }
+  .navbar svg:hover{
+    fill: #CE8850;
+  
+  }
+
+#circleContainer{
+    position: absolute;
+    z-index: 1;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.circle{
+    height: 80px;
+    width: 80px;
+    background-color:#467490;
+    border-radius: 50%;
+    border: 4px solid #E8DEDE;
+}
+.circle svg{
+  fill: #ffffff;
+  width: 60px;
+  height: 60px;
+  margin: 10px;
+}
+
+.reminder{
+  padding: 20px;
+  position: relative;
+  height: 400px;
+  bottom: 130px;
+  
+}
+.reminder svg{
+  width: 20px;
+  height: 20px;
+  fill:  #000000;
+  margin: auto;
+  vertical-align: middle;
+  display: inline-block;
+}
+.reminder p{
+  font-size: 14px;
+  font-weight: 300;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+
+
+/*Expense css*/
+header{
+  top: 0;
+  left: 0;
+  background-color: #467490;
+  padding: 3vh 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+header a{
+  color: #FFFFFF;
+  padding: 10vw;
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.expenseTab {
+  text-align: center;
+}
+
+.flexbox{
+  display: flex;
+}
+
+.allowanceTab {
+  width: 90vw;
+  height: 100px;
+  background-color: #2e4d2e;
+  border-radius: 15px;
+  margin: 2vh auto;
+  color: #FFFFFF;
+  text-align: left;
+}
+
+.allowanceTab a {
+  margin: 10px 20px 0;
+  width: 80%;
+}
+
+.allowanceTab svg{
+  margin: 5px 20px;
+}
+
+.inputDiv{
+  margin: 5px 20px 10px;
+  height: 50px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  align-items: center;
+  color: #2e4d2e;
+  font-size: 30px;
+}
+
+.inputDiv h3{
+  margin: 10px;
+}
+
+.inputDiv input[type="number"]{
+  border: none;
+  border-bottom: solid #2e4d2e;
+  color: #2e4d2e;
+  width: 80%;
+  font-size: 30px;
+  background-color: transparent;
+}
+
+.inputDiv input[type="number"]:focus, .allocationTab input[type="number"]:focus{
+  outline: none;
+}
+
+#addExpense {
+  width: 80vw;
+  height: 40px;
+  background-color: #2e4d2e;
+  padding: 10px;
+  border-radius: 15px;
+  border: none;
+  color: #FFFFFF;
+}
+
+.allocationTab{
+  text-align: left;
+  width: 75vw;
+  border-radius: 15px;
+  background-color: #CE8850;
+  margin: auto;
+  color: #ffffff;
+  padding: 10px 20px; 
+  white-space: nowrap;
+  margin-bottom: 10px;
+}
+
+.allocationTab a{
+  font-size: 30px;
+}
+
+.allocationTab i{
+  width: 90%;
+  font-size: 20px;
+  font-style: normal;
+}
+
+.allocationTab input[type="number"] {
+  border: none;
+  border-bottom: solid #ffffff;
+  color: #ffffff;
+  width: 90%;
+  font-size: 30px;
+  background-color: transparent;
+}
+
+
+
+
+
+
+/*Task CSS*/
+
+
+body{
+  margin-bottom: 130px;
+}
+.mainHeader{
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 50px;
+  background-color: #47738e;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header{
+  width: 90vw;
+  color: #ffffff;
+  margin: auto;
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+}
+
+.taskContainer{
+  text-align: center;
+ 
+}
+
+#ADDTASKBTN{
+  background-color: #47738e;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  height: 40px;
+  width: 80vw;
+  margin: 4vh 0 0;
+  font-size: 15px;
+
+}
+
+.taskContainer .taskListLabel{
+  text-align: left;
+  margin: 10px 0;
+  margin-left: 5vw;
+  font-size: 18px;
+  color: #9a5111;
+  text-align: center;
+}
+
+.taskContainer .taskListContainer{
+  border-radius: 10px;
+  width: 90vw;
+  margin: 0 auto;
+  padding: 5px 0;
+}
+
+.taskContainer ul{
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+
+.taskContainer .taskLists{
+  border-radius: 10px;
+  background-color: #47738e;
+  color: #ffffff;
+  padding: 10px;
+  margin: 10px;
+  font-size: 15px;
+ 
+}
+
+.taskContainer .taskLists button{
+  margin: 0 10px;
+}
+
+
+.deleteBtn {
+  background-color: #d64a3e;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.editBtn{
+  background-color: #567be1;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+
+.doneBtn{
+  background-color: #33966d;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  padding: 5px 10px;
+  border: 1px solid #ffffff;
+}
+
+
+.undoBtn{
+  background-color: #525151;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+
+.addTaskContainer {
+  text-align: center;
+  margin: 4vh 0;
+}
+
+.addTaskContainer p{
+  margin: 10px 10vw 0;
+  text-align: left;
+}
+
+#taskInput {
+  background-color: #47738e;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  height: 40px;
+  width: 80vw;
+  padding-left: 5vw;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+#notesInput {
+  background-color: #9a8b90;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  height: 80px;
+  width: 80vw;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+#taskInput::placeholder{
+  color: #ffffff;
+  font-size: 17px;
+
+}
+
+#notesInput::placeholder{
+  color: #d1d1d1;
+}
+
+#deadlineInput, #timeInput, #categoryInput, #reminderInput, #priorityInput{
+  background-color: #416cb7;
+  border: none;
+  border-radius: 10px;
+  height: 30px;
+  width: 70vw;
+  padding: 0 5vw;
+  font-size: 1.1rem;
+  margin: 5px auto;
+  color: #ffffff;
+
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+}
+
+#addTaskBtn, #modifyBtn{
+  background-color: #77ad6d;
+  border: none;
+  border-radius: 10px;
+  height: 40px;
+  width: 30vw;
+  padding: 0 2px;
+  font-size: 15px;
+  margin: 10px auto;
+  color: #ffffff;
+}
+.historyContainer ul{
+ list-style: none;
+ font-size: 15px;
+ text-align: center;
+}
+.historyContainer{
+  border-radius: 10px;
+  width: 90vw;
+  margin: 0 auto;
+  padding: 5px 0;
+}
+#History h2{
+  text-align: center;
+  color: #47738e;
+}
+.historyContainer .historyList{
+
+  border-radius: 10px;
+  width: 90vw;
+  margin: 0 auto;
+  padding: 5px 0;
+}
+.historyContainer .taskLists{
+  border-radius: 10px;
+  background-color: #47738e;
+  color: #ffffff;
+  padding: 10px;
+  margin: 10px;
+  font-size: 15px;
+}

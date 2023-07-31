@@ -1,0 +1,220 @@
+body {
+  font-family: Verdana;
+  background-color: #E8DEDE;
+  margin: 0;
+  padding: 0;
+}
+
+.registrationContainer {
+  max-width: auto;
+  padding: 30px;
+}
+
+
+.registrationContainer img{
+position: absolute;
+top:80px;
+width: 300px;
+height: 300px;
+margin: auto;
+
+}
+#back{
+fill: #000000;
+width: 20px;
+height: 20px;
+
+}
+#back1{
+fill: #000000;
+width: 20px;
+height: 20px;
+position: absolute;
+top: 30px;
+
+}
+.btn {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 10px 10px 0;
+  text-align: center;
+  font-size: 15px;
+  font-family: Tahoma;
+  border-radius: 20px;
+  margin: 12px 4px;
+  position: relative;
+  top: 360px;
+  text-decoration: none;
+}
+.button1 {
+  background-color: #6EAF6A; 
+  color: rgb(255, 255, 255); 
+  border: 2px solid #6EAF6A;
+}
+
+.button2 {
+  text-align: center;
+  background-color: #E8DEDE; 
+  color: black; 
+  border: 2px solid #000000;
+}
+
+#signUpRegFormContainer{
+  display: block;
+  max-width: auto;
+  padding: 30px;
+}
+h1{
+  font-family: "Century Gothic";
+  font-weight: 10;
+  color: #467490;
+  text-align: center;
+  position: relative;
+  font-size: 30px;
+}
+p{
+  font-size: 12px;
+  color: #CE8850;
+  font-family: "Century Gothic";
+  position: relative;
+  top: 15px;
+  text-align: left;
+}
+
+.signFormGroup {
+  margin-bottom: 10px;
+  position: relative;
+  top: 5px;
+}
+
+label {
+  display: inline-block;
+  font-family: "Century Gothic";
+  font-size: 15px;
+  max-width: auto;
+  padding: 10px 10px 10px 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  text-align: left;
+  text-indent: 10px;
+  width:100%;
+  padding: 10px 0px 10px 0;
+  border: 1px solid  #000000;
+  font-family: "Century Gothic";
+  font-size: 12px;
+  float: center;
+  background-color: #E8DEDE;
+}
+
+.errorMessage {
+  color: rgb(102, 4, 4);
+  font-size: 12px;
+  margin-top: 5px;
+  font-family: "Century Gothic";
+}
+
+#btn4Container{
+  padding: 10%;
+}
+
+.button4{
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px 10px 10px 0;
+  background-color: #E8DEDE; 
+  color: black; 
+  border: 1px solid #000000;
+  font-family: "Century Gothic";
+}
+
+.backSvg{
+  fill: #9e6333;;
+  width: 30px;
+  height: 30px;
+}
+
+.backButtonContainer{
+  background-color: #E8DEDE;
+  border: 1px solid #E8DEDE;
+}
+
+#loginRegFormContainer{
+  display: block;
+  max-width: auto;
+  margin-top: 40px;
+  padding: 30px;
+}
+.button5{
+  margin-top: 50px;
+  width: 100%;
+  padding: 10px 10px 10px 0;
+  background-color: #E8DEDE; 
+  color: black; 
+  border: 1px solid #000000;
+  font-family: "Century Gothic";
+}
+#btn5Container{
+padding: 10%;
+}
+
+.loginFormGroup {
+  margin-bottom: 15px;
+  position: relative;
+  top: 40px;
+}
+
+
+/* Landscape Responsiveness */
+@media screen and (orientation: landscape) {
+.registrationContainer {
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 30px;
+  margin-bottom: 200px;
+}
+
+.btn {
+  position: relative;
+  top: 200px;
+}
+
+h1 {
+  font-size: 30px;
+  top: 20px;
+  font-size: 30px;
+}
+
+p {
+  font-size: 15px;
+  top: 40px;
+}
+
+.signFormGroup {
+  top: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  font-size: 15px;
+}
+
+.button4 {
+  margin-top: 20px;
+}
+
+.button5 {
+  margin-top: 20px;
+}
+
+#loginRegFormContainer{
+  margin-top: 20px;
+  padding: 30px;
+}
+.loginFormGroup {
+  top: 20px;
+}
+}

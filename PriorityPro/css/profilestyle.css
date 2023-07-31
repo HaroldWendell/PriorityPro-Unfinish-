@@ -1,0 +1,130 @@
+body {
+    background-color: #E8DEDE;
+    margin: 0;
+    padding: 0;
+
+}
+
+.avatar-container {
+    position: relative;
+  }
+  
+  .avatar-circle {
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #ddd;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    top: 9%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .avatar-circle img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: none;
+  }
+  
+  .avatar-circle .user-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .avatar-circle .upload-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .avatar-circle .upload-text {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  #avatar-input {
+    display: none;
+  }
+
+.usernameContainer{
+    padding:30px;
+    height: 400px;
+}
+#back{
+  fill: #000000;
+  width: 20px;
+  height: 20px;
+}
+.usernameContainer h1{
+    text-align: center;
+    font-family: Helvetica;
+    font-size: 20px;
+    margin-top: 150px;
+}
+#btnContainer{
+    display: inline-block;
+    padding: 20px;
+    width: 90%;
+}
+
+#btnContainer button.clicked{
+  background-color: #467490;
+  color: #E8DEDE;
+  border: #467490;
+}
+
+#btnContainer .button1{
+    display: inline-block;
+    width: 100%;
+    padding: 10px 10px 10px 0;
+    border-radius: 20px;
+    margin-top: 10px;
+    font-family: 'Lucida Sans';
+    background-color: #E8DEDE; 
+    color: rgb(0, 0, 0); 
+    border: 2px solid #000000;
+}
+
+.logOutContainer{
+    background-color:#467490;
+    width: auto;
+    padding: 30px;
+    height: 250px;
+    position: relative;
+}
+#btn1Container{
+    display: inline-block;
+    padding: 20px;
+    width: 90%;
+}
+#btn1Container .button2{
+    display: inline-block;
+    width: 100%;
+    padding: 10px 10px 10px 0;
+    border-radius: 20px;
+    margin-top: 10px;
+    font-family: 'Lucida Sans';
+    background-color: #CE8850; 
+    color: rgb(255, 255, 255); 
+    border: 2px solid #CE8850;
+}
+#btn1Container .button3{
+    display: inline-block;
+    width: 100%;
+    padding: 10px 10px 10px 0;
+    border-radius: 20px;
+    margin-top: 40px;
+    font-family: 'Lucida Sans';
+    background-color: #000000; 
+    color: rgb(255, 255, 255); 
+    border: 2px solid #000000;
+    bottom: 80px;
+}

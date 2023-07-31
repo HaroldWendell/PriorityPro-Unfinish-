@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PriorityPro</title>
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css">
+</head>
+<body>
+    <div class="container">  
+        <a class="backContainer" href="profile.html">
+            <div id="back"class="back" onclick="backButton()" >
+              <div class="circle"><svg xmlns="http://www.w3.org/2000/svg" class="bi bi-arrow-90deg-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.146 4.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H12.5A2.5 2.5 0 0 1 15 6.5v8a.5.5 0 0 1-1 0v-8A1.5 1.5 0 0 0 12.5 5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4z"/>
+              </svg></div>
+            </div></a>
+        <h1>Priority Pro</h1>
+        <h4>Your Ultimate To-Do Task App</h4>
+     
+        <p>Welcome to Priority Pro, your ultimate to-do task app that helps you stay organized and efficient in managing your daily tasks. 
+            Priority Pro is designed to streamline your productivity, enabling you to focus on what truly matters.</p>
+        <img src="img/logo.png" alt="logo">
+        </h6>
+    </div>
+    <footer>        
+        <h6>At Priority Pro, our mission is to empower individuals and businesses with a tool that simplifies task management. 
+        We believe that a well-organized task list is essential for success, and we strive to provide a seamless and 
+        intuitive experience for our users.</footer>
+
+    <script>
+      // Function to set the orientation to portrait mode
+      function lockPortraitOrientation() {
+        if (screen.orientation && screen.orientation.lock) {
+          screen.orientation.lock("portrait")
+            .then(() => {
+              console.log("Orientation locked to portrait mode");
+            })
+            .catch((error) => {
+              console.error("Failed to lock orientation:", error);
+            });
+        }
+      }
+      
+      // Lock the orientation when the document is ready
+      document.addEventListener("DOMContentLoaded", lockPortraitOrientation);
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PriorityPro</title>
+  <link rel="stylesheet" href="css/style.css">
+ 
+</head>
+<body>
+    <div id="registerPage" class="registrationContainer">
+        <img src="img/logo.png" alt="Logo">
+        <button class="btn button1" type="button"><a href="sign_up.html">SIGN UP</button>
+        <button class="btn button2" type="button"><a href="login.html">LOG IN</button>
+    </div>
+
+    <script>
+      // Function to set the orientation to portrait mode
+      function lockPortraitOrientation() {
+        if (screen.orientation && screen.orientation.lock) {
+          screen.orientation.lock("portrait")
+            .then(() => {
+              console.log("Orientation locked to portrait mode");
+            })
+            .catch((error) => {
+              console.error("Failed to lock orientation:", error);
+            });
+        }
+      }
+  
+      // Lock the orientation when the document is ready
+      document.addEventListener("DOMContentLoaded", lockPortraitOrientation);
+    </script>
+</body>
+</html>

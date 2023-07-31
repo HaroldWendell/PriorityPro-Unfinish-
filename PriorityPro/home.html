@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PriorityPro</title>
+  <link rel="stylesheet" href="css/homestyle.css">
+  
+</head>
+<body>
+<!-- HOME SECTION-->
+  <section id="Home">
+    <div class="home">
+      <div class="circle1">
+        <p><span id="remainingTasksCount"></span><br>Remaining</p>
+      </div>
+    <div class="circle2">
+      <p><span id="completedTasksCount"></span><br>Completed</p></div>
+    </div>
+    <div class="circle3">
+      <p><span><svg xmlns="http://www.w3.org/2000/svg" class="bi bi-bar-chart-fill" viewBox="0 0 16 16">
+            <path d="M1 11a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3zm5-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2z"/>
+          </svg><br>Insights</span></p>
+    </div>
+    <div class="reminder">
+      <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-bell-fill" viewBox="0 0 16 16">
+        <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"/>
+      </svg>
+      <p>Reminder</p>
+      <div>
+        <h2>Today's Reminders</h2>
+        <ul id="reminderList"></ul>
+      </div>
+      
+  </section>
+
+<!-- EXPENSE SECTION-->
+    <section id="Expense">
+    <header>
+      <a>BUDGET MANAGER</a>
+    </header>
+    <div class="expenseTab">
+      <div class="allowanceTab">
+        <div class="flexbox">
+          <a id="allowanceLabel">MONTHLY ALLOWANCE</a>
+          <svg xmlns="http://www.w3.org/2000/svg" id="editIcon" width="24" height="24" viewBox="0 0 24 24">
+            <path fill="white" d="m7 17.013l4.413-.015l9.632-9.54c.378-.378.586-.88.586-1.414s-.208-1.036-.586-1.414l-1.586-1.586c-.756-.756-2.075-.752-2.825-.003L7 12.583v4.43zM18.045 4.458l1.589 1.583l-1.597 1.582l-1.586-1.585l1.594-1.58zM9 13.417l6.03-5.973l1.586 1.586l-6.029 5.971L9 15.006v-1.589z"/>
+            <path fill="white" d="M5 21h14c1.103 0 2-.897 2-2v-8.668l-2 2V19H8.158c-.026 0-.053.01-.079.01c-.033 0-.066-.009-.1-.01H5V5h6.847l2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2z"/>
+          </svg>
+        </div>
+        <div class="inputDiv flexbox">
+          <h3>₱</h3>
+          <input type="number" />
+        </div>
+      </div>
+  
+      <button id="addExpense">ADD EXPENSE</button>
+  
+      <p>EXPENSE ALLOCATION</p>
+  
+      <div id="allocationContainer">
+        <div class="allocationTab" style="display: none;">
+          <div class="flexbox">
+            <i>INSERT NAME</i>
+            <svg xmlns="http://www.w3.org/2000/svg" class="deleteIcon" width="24" height="24" viewBox="0 0 24 24" style="margin-top: -5;">
+              <path fill="#c00" d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
+            </svg>
+          </div>
+          <a>₱</a>
+          <input type="number" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- TASK SECTION-->
+  <section class="container" id="Task">
+    <div class="mainHeader">
+      <div class="header" id="headerPage1"><a>TASK MANAGER</a></div>
+      
+      <div class="header" id="headerPage2" style="display: none;">
+       
+        <div class="headerContent">
+          <svg onclick="goBack()" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16" style="cursor: pointer;">
+            <path fill="#d9b997" fill-rule="evenodd" d="m2.87 7.75l1.97 1.97a.75.75 0 1 1-1.06 1.06L.53 7.53L0 7l.53-.53l3.25-3.25a.75.75 0 0 1 1.06 1.06L2.87 6.25h9.88a3.25 3.25 0 0 1 0 6.5h-2a.75.75 0 0 1 0-1.5h2a1.75 1.75 0 1 0 0-3.5H2.87Z" clip-rule="evenodd"/>
+          </svg>
+          <a onclick="goBack()"></a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="taskContainer">
+      <button id="ADDTASKBTN"> 
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+            </svg>&nbsp;ADD TASK</button>
+      <h2 class="taskListLabel">TASKS</h2>
+      <div class="taskListContainer">
+        <ul id="taskList"></ul>
+      </div>
+      
+      </div>
+    </div>
+  
+    <div class="addTaskContainer" style="display: none;">
+      <input type="text" id="taskInput" placeholder="Add your task here...">
+      <textarea id="notesInput" placeholder="Notes"></textarea>
+      <p for="deadlineInput">Set Due Date </p>
+      <input type="date" id="deadlineInput">
+      <input type="time" id="timeInput">
+      <p for="categoryInput">Set Category</p>
+      <select id="categoryInput">
+        <option value="">Select Category</option>
+        <option value="work">Work</option>
+        <option value="personal">Personal</option>
+        <option value="study">Study</option>
+        <option value="home">Home</option>
+      </select>
+      <select id="reminderInput">
+        <option value="none">No Reminder</option>
+        <option value="10mins">10 Minutes Before</option>
+        <option value="1hour">1 Hour Before</option>
+        <option value="1day">1 Day Before</option>
+      </select>
+      <select id="priorityInput">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+      <div id="reminderMessage"></div> <!-- Add this div for displaying the reminder message -->
+      <button onclick="addTask()" id="addTaskBtn">ADD TASK</button>
+      <button id="modifyBtn" style="display: none;">MODIFY</button>
+    </div>
+  </section>
+
+
+
+<!-- HISTORY SECTION-->  
+<section id="History">
+  <h2 class="historyLabel">HISTORY</h2>
+    <div class="historyContainer">
+      <ul id="historyList" class="historyList"></ul>
+    </div>
+</section>
+
+
+<section id="Profile"></section>
+
+
+
+
+
+
+<!--JS SCRIPTS-->
+<script src="js/expense.js"></script>
+<script src="js/task.js"></script>
+
+<!--For home -->
+  <div class="navbar">
+    <!-- Navigation Bar -->
+    <a href="#Home"  class="active" onclick="showSection('Home')"> <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-house" viewBox="0 0 16 16">
+      <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"/>
+    </svg>HOME</a>
+<!--for expense -->
+    <a href="#Expense" class="active" onclick="showSection('Expense')"> <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-coin" viewBox="0 0 16 16">
+      <path d="M5.5 9.511c.076.954.83 1.697 2.182 1.785V12h.6v-.709c1.4-.098 2.218-.846 2.218-1.932 0-.987-.626-1.496-1.745-1.76l-.473-.112V5.57c.6.068.982.396 1.074.85h1.052c-.076-.919-.864-1.638-2.126-1.716V4h-.6v.719c-1.195.117-2.01.836-2.01 1.853 0 .9.606 1.472 1.613 1.707l.397.098v2.034c-.615-.093-1.022-.43-1.114-.9H5.5zm2.177-2.166c-.59-.137-.91-.416-.91-.836 0-.47.345-.822.915-.925v1.76h-.005zm.692 1.193c.717.166 1.048.435 1.048.91 0 .542-.412.914-1.135.982V8.518l.087.02z"/>
+      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+    </svg>EXPENSE</a>
+<!-- for task -->
+    <a href="#Task" class="taskText" onclick="showSection('Task')">TASK
+      <div id="circleContainer">
+        <div class="circle"><svg xmlns="http://www.w3.org/2000/svg" class="bi bi-check2-circle" viewBox="0 0 16 16">
+          <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"/>
+          <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
+        </svg></div>
+      </div></a>
+<!-- for history -->
+    <a href="#History" class="active" onclick="showSection('History')"><svg xmlns="http://www.w3.org/2000/svg" class="bi bi-clock-history" viewBox="0 0 16 16">
+      <path d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022l-.074.997zm2.004.45a7.003 7.003 0 0 0-.985-.299l.219-.976c.383.086.76.2 1.126.342l-.36.933zm1.37.71a7.01 7.01 0 0 0-.439-.27l.493-.87a8.025 8.025 0 0 1 .979.654l-.615.789a6.996 6.996 0 0 0-.418-.302zm1.834 1.79a6.99 6.99 0 0 0-.653-.796l.724-.69c.27.285.52.59.747.91l-.818.576zm.744 1.352a7.08 7.08 0 0 0-.214-.468l.893-.45a7.976 7.976 0 0 1 .45 1.088l-.95.313a7.023 7.023 0 0 0-.179-.483zm.53 2.507a6.991 6.991 0 0 0-.1-1.025l.985-.17c.067.386.106.778.116 1.17l-1 .025zm-.131 1.538c.033-.17.06-.339.081-.51l.993.123a7.957 7.957 0 0 1-.23 1.155l-.964-.267c.046-.165.086-.332.12-.501zm-.952 2.379c.184-.29.346-.594.486-.908l.914.405c-.16.36-.345.706-.555 1.038l-.845-.535zm-.964 1.205c.122-.122.239-.248.35-.378l.758.653a8.073 8.073 0 0 1-.401.432l-.707-.707z"/>
+      <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0v1z"/>
+      <path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z"/>
+    </svg>HISTORY</a>
+<!-- for profile-->
+    <a href="profile.html"class="active" onclick="showSection('Profile')"><svg xmlns="http://www.w3.org/2000/svg" class="bi bi-person-circle" viewBox="0 0 16 16">
+      <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+      <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+    </svg>PROFILE</a>
+  </div>
+
+  <script>
+    // Function to set the orientation to portrait mode
+    function lockPortraitOrientation() {
+      if (screen.orientation && screen.orientation.lock) {
+        screen.orientation.lock("portrait")
+          .then(() => {
+            console.log("Orientation locked to portrait mode");
+          })
+          .catch((error) => {
+            console.error("Failed to lock orientation:", error);
+          });
+      }
+    }
+
+    // Lock the orientation when the document is ready
+    document.addEventListener("DOMContentLoaded", lockPortraitOrientation);
+  </script>
+
+</body>
+</html>
